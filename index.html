@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>JavaScript Quiz</h1>
+    
+    <form id="quizForm">
+      <div class="question">
+        <p>1. What is a variable in JavaScript?</p>
+        <label><input type="radio" name="q1" value="A"> A. A container for data</label><br>
+        <label><input type="radio" name="q1" value="B"> B. A function</label><br>
+        <label><input type="radio" name="q1" value="C"> C. A type of object</label><br>
+        <label><input type="radio" name="q1" value="D"> D. A loop structure</label>
+      </div>
+
+      <div class="question">
+        <p>2. Which of the following is the correct way to declare a variable that can be reassigned?</p>
+        <label><input type="radio" name="q2" value="A"> A. let myVar;</label><br>
+        <label><input type="radio" name="q2" value="B"> B. const myVar;</label><br>
+        <label><input type="radio" name="q2" value="C"> C. var myVar;</label><br>
+        <label><input type="radio" name="q2" value="D"> D. let myVar = "hello";</label>
+      </div>
+
+      <div class="question">
+        <p>3. What is the difference between let and const?</p>
+        <label><input type="radio" name="q3" value="A"> A. let is for constant values, while const is for variables that can change.</label><br>
+        <label><input type="radio" name="q3" value="B"> B. let can be reassigned, while const cannot be reassigned.</label><br>
+        <label><input type="radio" name="q3" value="C"> C. const is a keyword for arrays, and let is for objects.</label><br>
+        <label><input type="radio" name="q3" value="D"> D. There is no difference.</label>
+      </div>
+
+      <div class="question">
+        <p>4. How do you create a string in JavaScript?</p>
+        <label><input type="radio" name="q4" value="A"> A. let str = 123;</label><br>
+        <label><input type="radio" name="q4" value="B"> B. let str = "Hello";</label><br>
+        <label><input type="radio" name="q4" value="C"> C. let str = 3.14;</label><br>
+        <label><input type="radio" name="q4" value="D"> D. let str = true;</label>
+      </div>
+
+      <div class="question">
+        <p>5. What does the .toUpperCase() method do?</p>
+        <label><input type="radio" name="q5" value="A"> A. Converts a string to lowercase</label><br>
+        <label><input type="radio" name="q5" value="B"> B. Converts a string to uppercase</label><br>
+        <label><input type="radio" name="q5" value="C"> C. Removes the first letter of the string</label><br>
+        <label><input type="radio" name="q5" value="D"> D. Concatenates two strings</label>
+      </div>
+
+      <div class="question">
+        <p>6. What is the result of typeof null in JavaScript?</p>
+        <label><input type="radio" name="q6" value="A"> A. "object"</label><br>
+        <label><input type="radio" name="q6" value="B"> B. "null"</label><br>
+        <label><input type="radio" name="q6" value="C"> C. "undefined"</label><br>
+        <label><input type="radio" name="q6" value="D"> D. "boolean"</label>
+      </div>
+
+      <div class="question">
+        <p>7. How do you create a function in JavaScript?</p>
+        <label><input type="radio" name="q7" value="A"> A. function = myFunction() {}</label><br>
+        <label><input type="radio" name="q7" value="B"> B. function myFunction() {}</label><br>
+        <label><input type="radio" name="q7" value="C"> C. let myFunction() {}</label><br>
+        <label><input type="radio" name="q7" value="D"> D. create function myFunction() {}</label>
+      </div>
+
+      <div class="question">
+        <p>8. How do you check if a number is even in JavaScript?</p>
+        <label><input type="radio" name="q8" value="A"> A. if (num % 2 == 1)</label><br>
+        <label><input type="radio" name="q8" value="B"> B. if (num % 2 == 0)</label><br>
+        <label><input type="radio" name="q8" value="C"> C. if (num === 2)</label><br>
+        <label><input type="radio" name="q8" value="D"> D. if (num % 2 != 0)</label>
+      </div>
+
+      <div class="question">
+        <p>9. What is the purpose of a loop in JavaScript?</p>
+        <label><input type="radio" name="q9" value="A"> A. To iterate over a collection of values or perform repetitive tasks</label><br>
+        <label><input type="radio" name="q9" value="B"> B. To define an object</label><br>
+        <label><input type="radio" name="q9" value="C"> C. To check conditions</label><br>
+        <label><input type="radio" name="q9" value="D"> D. To create arrays</label>
+      </div>
+
+      <div class="question">
+        <p>10. How do you define an array in JavaScript?</p>
+        <label><input type="radio" name="q10" value="A"> A. let arr = {1, 2, 3};</label><br>
+        <label><input type="radio" name="q10" value="B"> B. let arr = (1, 2, 3);</label><br>
+        <label><input type="radio" name="q10" value="C"> C. let arr = [1, 2, 3];</label><br>
+        <label><input type="radio" name="q10" value="D"> D. let arr = "1, 2, 3";</label>
+      </div>
+
+      <div class="question">
+        <p>11. Which of the following is a correct way to declare a constant?</p>
+        <label><input type="radio" name="q11" value="A"> A. let PI = 3.14;</label><br>
+        <label><input type="radio" name="q11" value="B"> B. const PI = 3.14;</label><br>
+        <label><input type="radio" name="q11" value="C"> C. var PI = 3.14;</label><br>
+        <label><input type="radio" name="q11" value="D"> D. constant PI = 3.14;</label>
+      </div>
+
+      <div class="question">
+        <p>12. What is the purpose of the return keyword in a function?</p>
+        <label><input type="radio" name="q12" value="A"> A. To exit the function</label><br>
+        <label><input type="radio" name="q12" value="B"> B. To display output on the screen</label><br>
+        <label><input type="radio" name="q12" value="C"> C. To assign a value to a variable</label><br>
+        <label><input type="radio" name="q12" value="D"> D. To create a new function</label>
+      </div>
+
+      <div class="question">
+        <p>13. Which loop would you use to iterate through an array?</p>
+        <label><input type="radio" name="q13" value="A"> A. for...in</label><br>
+        <label><input type="radio" name="q13" value="B"> B. for...of</label><br>
+        <label><input type="radio" name="q13" value="C"> C. while</label><br>
+        <label><input type="radio" name="q13" value="D"> D. do...while</label>
+      </div>
+
+      <div class="question">
+        <p>14. What is the output of the following code?<br>let x = 5; x++; console.log(x);</p>
+        <label><input type="radio" name="q14" value="A"> A. 5</label><br>
+        <label><input type="radio" name="q14" value="B"> B. 6</label><br>
+        <label><input type="radio" name="q14" value="C"> C. undefined</label><br>
+        <label><input type="radio" name="q14" value="D"> D. error</label>
+      </div>
+
+      <div class="question">
+        <p>15. What does console.log() do in JavaScript?</p>
+        <label><input type="radio" name="q15" value="A"> A. Creates a new console</label><br>
+        <label><input type="radio" name="q15" value="B"> B. Outputs a message to the console</label><br>
+        <label><input type="radio" name="q15" value="C"> C. Runs the program</label><br>
+        <label><input type="radio" name="q15" value="D"> D. Logs variables to a file</label>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
