@@ -1,5 +1,6 @@
-function checkAnswers() {
-  const answers = {
+let currentQuestion = 1;
+
+const answers = {
     q1: 'A',
     q2: 'A',
     q3: 'B',
@@ -17,25 +18,28 @@ function checkAnswers() {
     q15: 'B'
   };
 
-  const form = document.getElementById('quizForm');
-  let score = 0;
-  let totalQuestions = Object.keys(answers).length;
-
-  for (let q in answers) {
-    const userAnswer = form.querySelector(`input[name="${q}"]:checked`);
-    if (userAnswer && userAnswer.value === answers[q]) {
-      score++;
-    }
+function checkAnswer(questionNumber) {
+  const selectedAnswer = document.querySelector(`input[name="q${questionNumber}"]:checked`);
+  if (!selectedAnswer) {
+    alert("Please select an answer.");
+    return;
   }
 
-  const resultDiv = document.getElementById('result');
-  resultDiv.innerHTML = `You got ${score} out of ${totalQuestions} correct!`;
+  const userAnswer = selectedAnswer.value;
+  const correctAnswer = answers[`q${questionNumber}`];
 
-  if (score === totalQuestions) {
-    resultDiv.innerHTML += "<br>Excellent job!";
-  } else if (score > totalQuestions / 2) {
-    resultDiv.innerHTML += "<br>Good work!";
+  if (userAnswer === correctAnswer) {
+    alert("Correct!");
   } else {
-    resultDiv.innerHTML += "<br>Keep practicing!";
+    alert("Incorrect. The correct answer is: " + correctAnswer);
+  }
+
+  // Hide current question and show the next question
+  document.getElementById(`question${questionNumber}`).style.display = "none";
+  if (questionNumber < 15) {
+    document.getElementById(`question${questionNumber + 1}`).style.display = "block";
+  } else {
+    document.getElementById('result').style.display = "block";
+    document.getElementById('result').innerHTML = "Quiz Complete!";
   }
 }
